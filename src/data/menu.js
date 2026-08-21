@@ -11,7 +11,7 @@ export const biryaniMenu = [
   {
     id: 'full-biryani',
     name: 'Full Plate Biryani',
-    price: 350,
+    price: 380,
     tag: 'Bestseller',
     spice: 3,
     desc: 'Layered basmati rice slow-cooked with spiced meat, Karachi-style — a full meal for one hungry person.',
