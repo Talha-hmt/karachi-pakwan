@@ -1,0 +1,66 @@
+.route {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.route-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.route-path {
+  stroke: rgba(252, 239, 217, 0.45);
+  stroke-width: 2;
+  stroke-dasharray: 2 10;
+  stroke-linecap: round;
+}
+
+.route-label {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  fill: rgba(252, 239, 217, 0.55);
+}
+
+.route-dot {
+  position: absolute;
+  inset: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--gold-500);
+  box-shadow: 0 0 0 4px rgba(231, 163, 62, 0.22);
+  offset-path: path('M12,70 C90,10 180,120 260,55 C320,10 360,40 388,20');
+  offset-rotate: 0deg;
+  offset-distance: 0%;
+  animation: travel 5s ease-in-out infinite;
+}
+
+.route-dot::after {
+  content: '🛵';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
+@keyframes travel {
+  0% { offset-distance: 0%; }
+  45% { offset-distance: 100%; }
+  55% { offset-distance: 100%; }
+  100% { offset-distance: 0%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-dot {
+    animation: none;
+    offset-distance: 50%;
+  }
+}

@@ -1,0 +1,27 @@
+.footer {
+  padding: var(--space-4) 0 var(--space-5);
+  border-top: 1px solid rgba(252, 239, 217, 0.12);
+  margin-top: var(--space-5);
+}
+
+.footer-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: rgba(252, 239, 217, 0.6);
+}
+
+.footer-row span:first-child {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: rgba(252, 239, 217, 0.85);
+}
+
+@media (min-width: 640px) {
+  .footer-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

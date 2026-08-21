@@ -1,0 +1,56 @@
+.how-list {
+  list-style: none;
+  margin-top: var(--space-4);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.how-step {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(252, 239, 217, 0.14);
+}
+
+.how-step:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.how-num {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--gold-500);
+  min-width: 2.4ch;
+}
+
+.how-step h3 {
+  font-size: 1.15rem;
+  color: var(--cream);
+}
+
+.how-step p {
+  margin-top: 0.35rem;
+  color: rgba(252, 239, 217, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  max-width: 52ch;
+}
+
+@media (min-width: 768px) {
+  .how-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .how-step {
+    flex-direction: column;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .how-step + .how-step {
+    border-left: 1px dashed rgba(252, 239, 217, 0.2);
+    padding-left: var(--space-3);
+  }
+}

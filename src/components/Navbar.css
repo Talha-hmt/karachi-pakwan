@@ -1,0 +1,58 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(74, 13, 16, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(231, 163, 62, 0.25);
+}
+
+.navbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-block: 0.9rem;
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--cream);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.navbar-mark {
+  font-size: 1.3rem;
+}
+
+.navbar-links {
+  display: none;
+  gap: var(--space-4);
+  font-size: 0.92rem;
+  color: rgba(252, 239, 217, 0.85);
+}
+
+.navbar-links a:hover {
+  color: var(--gold-500);
+}
+
+.navbar-phone {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--gold-500);
+  border: 1px solid rgba(231, 163, 62, 0.4);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+  }
+}
